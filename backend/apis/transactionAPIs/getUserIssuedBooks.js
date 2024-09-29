@@ -1,6 +1,6 @@
 const { default: mongoose } = require('mongoose');
 const Transaction = require('../../models/transaction');
-const User = require('../../models/User');
+const User = require('../../models/user');
 
 async function GetUserTransactionHistory(req, res) {
     try {
