@@ -1,6 +1,6 @@
-const Transaction = require('../../models/Transaction');
+const Transaction = require('../../models/transaction');
 const Book = require('../../models/book');
-const User = require('../../models/User');
+const User = require('../../models/user');
 const { default: mongoose } = require('mongoose');
 
 async function ReturnBook(req, res) {
