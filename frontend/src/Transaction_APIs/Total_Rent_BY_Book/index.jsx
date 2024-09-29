@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import { useMutation } from "@tanstack/react-query";
-import { searchBookRent } from "../../API_Functions/APIs"; // Import the searchBookRent API function
+import { searchBookRent } from "../../API_Functions/APIs"; 
 import { toast } from "react-toastify";
 
 function SearchBook() {
@@ -10,7 +10,7 @@ function SearchBook() {
 
   const searchBookRentMutation = useMutation({
     mutationKey: ["searchBookRent"],
-    mutationFn: searchBookRent, // API function to get the total rent by book name
+    mutationFn: searchBookRent, 
     onSuccess: (data) => {
       setTotalRent(data.totalRent);
       toast.success("Book rent fetched successfully");

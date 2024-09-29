@@ -75,7 +75,6 @@ function SearchBook() {
             rentPerDay={book.rentPerDay}
           />
         ))}
-      {/* Pass the books state to BookResults */}
     </>
   );
 }

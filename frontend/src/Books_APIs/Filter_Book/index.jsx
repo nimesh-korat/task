@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import BookResults from "../Search_Book/Components/BookResult";
 import { useMutation } from "@tanstack/react-query";
-import { filterBooks } from "../../API_Functions/APIs"; // Assuming this is your filter API function
+import { filterBooks } from "../../API_Functions/APIs";
 import { toast } from "react-toastify";
 
 function FilterBook() {
@@ -19,7 +19,7 @@ function FilterBook() {
     mutationFn: filterBooks,
     onSuccess: (data) => {
       setFilteredBooks(data.data);
-      setFilterData({ bName: "", bCategory: "", minRent: "", maxRent: "", });
+      setFilterData({ bName: "", bCategory: "", minRent: "", maxRent: "" });
     },
     onError: (error) => {
       toast.error(error.message);
@@ -99,7 +99,6 @@ function FilterBook() {
         </Card>
       </div>
 
-      {/* Render filtered book results */}
       {filteredBooks.length > 0 &&
         filteredBooks.map((book) => (
           <BookResults

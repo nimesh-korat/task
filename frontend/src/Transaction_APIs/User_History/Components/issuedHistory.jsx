@@ -15,7 +15,7 @@ function IssuedHistory({ bookName, issueDate, returnDate, totalRent, status }) {
             </Col>
           </Row>
           <Card.Text>Total Rent: ₹ {totalRent}</Card.Text>
-          {/* Apply inline conditional styling directly */}
+
           <Card.Text
             style={{
               color: status === "BOOK IS ISSUED" ? "red" : "green",

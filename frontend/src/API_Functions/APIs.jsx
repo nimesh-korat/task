@@ -2,6 +2,7 @@ import axios from "axios";
 
 const api = process.env.REACT_APP_ADMIN_API_URL;
 
+//API for fetching books
 export async function fetchBooks() {
   try {
     const response = await axios.get(`${api}fetchBooks`);
@@ -19,6 +20,7 @@ export async function fetchBooks() {
   }
 }
 
+//API for fetching users
 export async function fetchUsers() {
   try {
     const response = await axios.get(`${api}fetchUsers`);
@@ -36,6 +38,7 @@ export async function fetchUsers() {
   }
 }
 
+//API for adding users
 export async function addUser(data) {
   try {
     const response = await axios.post(`${api}addUser`, data);
@@ -51,6 +54,7 @@ export async function addUser(data) {
   }
 }
 
+//API for adding books
 export async function addBook(data) {
   try {
     const response = await axios.post(`${api}addBook`, data);
@@ -66,6 +70,7 @@ export async function addBook(data) {
   }
 }
 
+//API for searching books
 export async function searchBook(data) {
   try {
     const response = await axios.post(`${api}searchBook`, data);
@@ -83,6 +88,7 @@ export async function searchBook(data) {
   }
 }
 
+//API for searching books
 export async function searchBooksByRentRange(data) {
   try {
     const response = await axios.post(`${api}searchBookWithRange`, data);
@@ -98,6 +104,7 @@ export async function searchBooksByRentRange(data) {
   }
 }
 
+//API for filtering books
 export async function filterBooks(data) {
   try {
     const response = await axios.post(`${api}filterBooks`, data);
@@ -115,6 +122,7 @@ export async function filterBooks(data) {
   }
 }
 
+//API for issuing books
 export async function issueBook(data) {
   try {
     const response = await axios.post(`${api}issueBook`, data);
@@ -132,6 +140,7 @@ export async function issueBook(data) {
   }
 }
 
+//API for returning books
 export async function returnBook(data) {
   try {
     const response = await axios.post(`${api}returnBook`, data);
@@ -149,6 +158,7 @@ export async function returnBook(data) {
   }
 }
 
+//API for getting book history
 export async function getBookHistory(data) {
   try {
     const response = await axios.post(`${api}getTransactionByBook`, data);
@@ -166,6 +176,7 @@ export async function getBookHistory(data) {
   }
 }
 
+//API for getting total generated
 export async function searchBookRent(data) {
   try {
     const response = await axios.post(`${api}getTotalGenRentByBook`, data);
@@ -183,6 +194,7 @@ export async function searchBookRent(data) {
   }
 }
 
+//API for getting user history
 export async function getUserHistory(data) {
   try {
     const response = await axios.post(`${api}getUserIssuedBooks`, data);
@@ -200,9 +212,13 @@ export async function getUserHistory(data) {
   }
 }
 
+//API for getting user history
 export async function getTransactionsByDateRange(data) {
   try {
-    const response = await axios.post(`${api}getTransactionHistoryByDate`, data);
+    const response = await axios.post(
+      `${api}getTransactionHistoryByDate`,
+      data
+    );
     return response.data;
   } catch (error) {
     console.error("getTransactionsByDateRange() error:", error);

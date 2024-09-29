@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import BookResults from "../Search_Book/Components/BookResult";
 import { useMutation } from "@tanstack/react-query";
-import { searchBooksByRentRange } from "../../API_Functions/APIs"; // Assuming this is the API function
+import { searchBooksByRentRange } from "../../API_Functions/APIs";
 import { toast } from "react-toastify";
 
 function RentRange() {

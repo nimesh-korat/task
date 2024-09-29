@@ -26,7 +26,7 @@ function ViewAllUsers() {
       {users.length > 0 ? (
         users.map((user) => (
           <Users
-            key={user._id} // Ensure the key is unique for each user
+            key={user._id} 
             username={user.uName}
             userId={user._id}
             dob={new Date(user.uDOB).toLocaleDateString()}

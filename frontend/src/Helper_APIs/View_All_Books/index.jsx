@@ -25,7 +25,7 @@ function ViewAllBooks() {
       {books.length > 0 ? (
         books.map((book) => (
           <Books
-            key={book._id} // Ensure the key is unique for each book
+            key={book._id}
             bookId={book._id}
             bookName={book.name}
             bookCategory={book.category}

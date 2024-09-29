@@ -3,5 +3,5 @@
 }
 
 .card-hover-zoom:hover {
-  transform: scale(1.05); /* Adjust the scale for the zoom effect */
+  transform: scale(1.05); 
 }
